@@ -27,8 +27,8 @@ The NoRomDisk variants don't have ROM disk support at all: the SD card slots are
 
 | File                  | Purpose                                                                                              |
 | --------------------- | ---------------------------------------------------------------------------------------------------- |
-| `driver.asm`          | The MFRSD driver. Pulls in `romdisk.asm` via an `include`.                                           |
-| `romdisk.asm`         | ROM-disk feature included from `driver.asm`.                                                         |
+| `driver.asm`          | The MFRSD driver. Pulls in `romdisk.asm` via an `include`, except in the NoRomDisk variants.         |
+| `romdisk.asm`         | ROM-disk feature included from `driver.asm` (not used by the NoRomDisk variants).                    |
 | `recovery_header.asm` | 512-byte identification header prepended to the Recovery variants.                                   |
 | `Makefile`            | Build rules; see below.                                                                              |
 | `docker-build.sh`     | Wrapper that builds the ROMs in the Nextor dev Docker image (no local toolchain needed).             |
